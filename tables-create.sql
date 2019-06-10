@@ -1,19 +1,25 @@
-CREATE TABLE wp_perfmon_staff (
+CREATE TABLE wp_perfman_staff (
     id int(11) unsigned NOT NULL AUTO_INCREMENT,
     user_name varchar(100) NOT NULL,
     email varchar(100) NOT NULL,
     name varchar(100),
+    nickname varchar(100),
     surname varchar(100),
     date_added datetime,
     personnel_number varchar(20),
-    business_unit varchar(100),
+    business_unit varchar(10),
     job_title varchar(100),
     manager_name varchar(100),
     manager_user_name varchar(100),
-    manager_email varchar(100)
+    manager_email varchar(100),
+    aud_inserted datetime,
+    aud_inserted_by varchar(100),
+    aud_updated datetime,
+    aud_updated_by varchar(100),
+    PRIMARY KEY (id)
 )
 
-CREATE TABLE wp_perfmon_staff_performance_plan (
+CREATE TABLE wp_perfman_staff_performance_plan (
     id int(11) unsigned NOT NULL AUTO_INCREMENT,
     staff_user_name varchar(100) NOT NULL,
     staff_email varchar(100) NOT NULL,
@@ -22,10 +28,24 @@ CREATE TABLE wp_perfmon_staff_performance_plan (
     source varchar(100),
     target varchar(500),
     stretch_target varchar(500),
-    training,
+    training varchar(500),
     results varchar(500),
     weight decimal(3,2),
     manager_approved tinyint,
     manager_approved_date datetime,
-    
+    target1_level varchar(50),
+    target1_value decimal(3,2),
+    target1_completed_date datetime,
+    target1_manager_reviewed tinyint,
+    target1_manager_review_date datetime,
+    target2_level varchar(50),
+    target2_value decimal(3,2),
+    target2_completed_date datetime,
+    target2_manager_reviewed tinyint,
+    target2_manager_review_date datetime,
+    aud_inserted datetime,
+    aud_inserted_by varchar(100),
+    aud_updated datetime,
+    aud_updated_by varchar(100),
+    PRIMARY KEY (id)
 )
