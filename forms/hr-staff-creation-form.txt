@@ -1,0 +1,33 @@
+<label> New Staff Email (required)</label>
+    [email* staff-email] 
+
+<label> Name </label>
+    [text staff-name]
+
+<label> Known As</label>
+    [text nickname] 
+
+<label> Surname</label>
+    [text surname] 
+
+<label> Code</label>
+    [text personnel-number] 
+
+<label> Business Unit</label>
+    [text business-unit] 
+
+<label> Position</label>
+    [text job-title] 
+
+<label> Level</label>
+    [radio level label_first default:2 "0" "1" "2" "3" "4"] 
+
+<label> Reporting Manager Name</label>
+    [text manager-name] 
+
+<label> Reporting Manager Email</label>
+    [text manager-email] 
+
+[hidden form-name "hr-staff-creation-form"]
+
+[submit "Send"]

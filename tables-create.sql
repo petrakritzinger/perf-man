@@ -1,7 +1,7 @@
 CREATE TABLE wp_perfman_staff (
     id int(11) unsigned NOT NULL AUTO_INCREMENT,
-    user_name varchar(100) NOT NULL,
     email varchar(100) NOT NULL,
+    user_name varchar(100),
     name varchar(100),
     nickname varchar(100),
     surname varchar(100),
@@ -12,17 +12,19 @@ CREATE TABLE wp_perfman_staff (
     manager_name varchar(100),
     manager_user_name varchar(100),
     manager_email varchar(100),
+    level tinyint,
     aud_inserted datetime,
     aud_inserted_by varchar(100),
     aud_updated datetime,
     aud_updated_by varchar(100),
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE KEY(email) 
 )
 
 CREATE TABLE wp_perfman_staff_performance_plan (
     id int(11) unsigned NOT NULL AUTO_INCREMENT,
-    staff_user_name varchar(100) NOT NULL,
     staff_email varchar(100) NOT NULL,
+    staff_user_name varchar(100), 
     year int(4),
     objective varchar(500),
     source varchar(100),
@@ -47,5 +49,16 @@ CREATE TABLE wp_perfman_staff_performance_plan (
     aud_inserted_by varchar(100),
     aud_updated datetime,
     aud_updated_by varchar(100),
+    PRIMARY KEY (id),
+    UNIQUE KEY(staff_email, year)
+)
+
+CREATE TABLE wp_perfman_log (
+    id int(11) unsigned NOT NULL AUTO_INCREMENT,
+    log_date datetime,
+    log_level tinyint,
+    log_message varchar(500),
+    aud_inserted datetime,
+    aud_inserted_by varchar(100),
     PRIMARY KEY (id)
 )

@@ -58,3 +58,17 @@ INSERT INTO wp_perfman_staff_performance_plan(
  now(),
  @aud_inserted_by
 )
+
+INSERT INTO wp_perfman_log(
+ log_date,
+ log_level,
+ log_message,
+ aud_inserted,
+ aud_inserted_by
+) VALUES (
+ now(),
+ @log_level,
+ @log_message,
+ now(),
+ aud_inserted_by
+)
