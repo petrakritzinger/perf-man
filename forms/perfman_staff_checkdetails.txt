@@ -1,0 +1,25 @@
+<div style="padding:"0;"><label> Email (required)
+    [email* staffemail default:get] </label></div>
+ 
+<div class="content-column one_third"><div style="padding:5px;"><label> First Name 
+    [text staffname default:get] </label></div></div>
+<div class="content-column one_third"><div style="padding:5px;"><label> Known As 
+    [text nickname default:get]  </label></div></div>
+<div class="content-column one_third last_column"><div style="padding:5px;"><label> Surname [text surname default:get]
+     </label></div></div><div class="clear_column"></div>
+
+<div class="content-column one_third"><div style="padding:5px;"><label> Code 
+    [text personnelnumber default:get] </label></div></div>
+<div class="content-column one_third"><div style="padding:5px;"><label> Business Unit 
+    [text businessunit default:get]  </label></div></div>
+<div class="content-column one_third last_column"><div style="padding:5px;"><label> Position [text jobtitle default:get] 
+     </label></div></div><div class="clear_column"></div>   
+
+<div class="content-column one_half"><div style="padding:5px;"><label> Reporting Manager Name
+    [text managername default:get]  </label></div></div>
+<div class="content-column one_half"><div style="padding:5px;"><label> Reporting Manager Email 
+    [email manageremail default:get]  </label></div></div>
+     
+[text formname "hr-staff-checkdetails-form"]
+    
+[submit "Save details"]

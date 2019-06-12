@@ -62,3 +62,12 @@ CREATE TABLE wp_perfman_log (
     aud_inserted_by varchar(100),
     PRIMARY KEY (id)
 )
+
+CREATE TABLE wp_perfman_email (
+    id int(11) unsigned NOT NULL AUTO_INCREMENT,
+    date_sent datetime,
+    sent_to varchar(100),
+    message_subject varchar(100),
+    message_body varchar(500),  
+    PRIMARY KEY (id)
+)

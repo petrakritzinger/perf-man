@@ -1,0 +1,12 @@
+For javascript
+- Install SOGO Add Script plugin
+- Add javascript to footer
+
+Roles plugin
+- Install Nav Menu Roles
+
+Contact Form 7 Shortcode Enabler
+
+Column Shortcodes
+
+Contact Form 7 Redirection
